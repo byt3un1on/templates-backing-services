@@ -1,0 +1,16 @@
+name: 3 - PR to Prd
+
+on:
+  push:
+    branches:
+      - release/*
+
+jobs:
+  pr_to_prd:
+    name: PR
+    permissions:
+      contents: write
+    uses: byt3un1on/shared-github-actions/.github/workflows/release_&_pr.yml@master
+    secrets: inherit
+    with:
+      env: "prd"
