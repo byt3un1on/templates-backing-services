@@ -1,0 +1,12 @@
+{
+  "description": "Pipeline GeoIP",
+  "processors": [
+    {
+      "geoip": {
+        "field": "client_ip",
+        "target_field": "geo",
+        "ignore_missing": true
+      }
+    }
+  ]
+}

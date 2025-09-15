@@ -1,0 +1,38 @@
+# Logs e temporários
+*.log
+*.out
+*.err
+*.tmp
+
+# Certificados (não versionar em repositório público!)
+certs/
+*.pem
+*.key
+*.csr
+*.srl
+*.ext
+
+# Arquivos de ambiente
+.env
+.env.local
+.env.*.local
+
+# Pastas de dados do Docker
+volumes/
+opensearch-data1/
+opensearch-data2/
+
+# Cache e dependências
+__pycache__/
+*.pyc
+node_modules/
+dist/
+build/
+
+# IDE/editor
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store
+Thumbs.db
