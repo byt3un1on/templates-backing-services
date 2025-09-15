@@ -1,0 +1,12 @@
+{
+  "description": "Normaliza timestamp em formato ISO8601",
+  "processors": [
+    {
+      "date": {
+        "field": "timestamp",
+        "formats": ["ISO8601", "yyyy-MM-dd HH:mm:ss", "epoch_millis"],
+        "target_field": "timestamp"
+      }
+    }
+  ]
+}
