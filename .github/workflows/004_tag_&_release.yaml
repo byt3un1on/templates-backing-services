@@ -1,0 +1,14 @@
+name: 4 - Tag & Release
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  tag_and_release:
+    name: Tag
+    permissions:
+      contents: write
+    uses: byt3un1on/shared-github-actions/.github/workflows/tag_&_release.yml@master
+    secrets: inherit

@@ -1,0 +1,16 @@
+name: 1 - PR to Dev
+
+on:
+  push:
+    branches:
+      - 'feature/*'
+
+jobs:
+  pr_to_dev:
+    name: PR
+    permissions:
+      contents: write
+    uses: byt3un1on/shared-github-actions/.github/workflows/release_&_pr.yml@master
+    secrets: inherit
+    with:
+      env: "dev"

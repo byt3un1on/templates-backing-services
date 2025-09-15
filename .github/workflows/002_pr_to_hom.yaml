@@ -1,0 +1,16 @@
+name: 2 - PR to Hom
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  pr_to_hom:
+    name: PR
+    permissions:
+      contents: write
+    uses: byt3un1on/shared-github-actions/.github/workflows/release_&_pr.yml@master
+    secrets: inherit
+    with:
+      env: "hom"
