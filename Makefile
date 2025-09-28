@@ -5,7 +5,7 @@ up: ## Sobe tudo em pipeline (env -> compose -> wait -> seed -> test)
 	bash scripts/get-env.sh
 
 	@echo "🚀 Subindo cluster com Docker Compose..."
-	docker compose -f compose/docker-compose.yml up -d
+	docker compose -f compose/docker-compose.yml up -d --build
 
 	@echo "⏳ Aguardando cluster ficar disponível..."
 	bash scripts/wait-for-http.sh http://localhost:9200

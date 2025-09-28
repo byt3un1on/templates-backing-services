@@ -1,7 +1,6 @@
 {
   "description": "Pipeline para logs",
   "processors": [
-    { "set": { "field": "ingested_at", "value": "{{_ingest.timestamp}}" } },
-    { "remove": { "field": "debug" } }
+    { "set": { "field": "ingested_at", "value": "{{_ingest.timestamp}}" } }
   ]
 }

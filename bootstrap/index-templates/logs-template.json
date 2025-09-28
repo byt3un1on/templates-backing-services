@@ -12,7 +12,10 @@
         "level":     { "type": "keyword" },
         "message":   { "type": "text" },
         "service":   { "type": "keyword" },
-        "host":      { "type": "keyword" }
+        "host":      { "type": "keyword" },
+        "file":      { "type": "text" },
+        "line":      { "type": "integer" },
+        "details":   { "type": "nested" }
       }
     }
   }

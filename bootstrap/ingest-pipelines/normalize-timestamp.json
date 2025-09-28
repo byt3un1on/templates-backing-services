@@ -1,11 +1,12 @@
 {
-  "description": "Normaliza timestamp em formato ISO8601",
+  "description": "Pipeline simples para normalização de timestamp (pronto para ISO8601)",
   "processors": [
     {
       "date": {
         "field": "timestamp",
         "formats": ["ISO8601", "yyyy-MM-dd HH:mm:ss", "epoch_millis"],
-        "target_field": "timestamp"
+        "target_field": "@timestamp",
+        "ignore_failure": true
       }
     }
   ]
