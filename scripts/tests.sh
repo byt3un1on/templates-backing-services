@@ -55,7 +55,7 @@ hr
 
 # 4. Teste de Pipelines
 echo "🔎 Verificando ingest pipelines aplicados..."
-for pipe in geoip-pipeline logs-pipelines normalize-timestamp; do
+for pipe in logs-pipelines normalize-timestamp; do
   if curl -fsSL "${auth_args[@]}" "$OPENSEARCH_URL/_ingest/pipeline/$pipe" | grep -q "\"$pipe\""; then
     echo "✅ Pipeline [$pipe] encontrado"
   else

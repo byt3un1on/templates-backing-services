@@ -46,13 +46,7 @@ Este projeto é um template completo para provisionar rapidamente um cluster Ope
    cd templates-backing-services
    ```
 
-2. **Configure as variáveis de ambiente**
-   ```sh
-   cp .env.example .env
-   # Edite .env se desejar customizar versões, portas, recursos, etc.
-   ```
-
-3. **Suba todo o ambiente, aplique seeds e rode testes**
+2. **Suba todo o ambiente, aplique seeds e rode testes**
    ```sh
    make up
    ```
@@ -62,7 +56,7 @@ Este projeto é um template completo para provisionar rapidamente um cluster Ope
    - Aplicar index templates e ingest pipelines
    - Rodar testes básicos de saúde
 
-4. **Derrube o ambiente**
+3. **Derrube o ambiente**
    ```sh
    make down
    ```
